@@ -6,4 +6,15 @@ the theme was DontStopMoving!
 
 This is my first time using cmake to ship / publish a project on githut so it may not be as well step up as some of you developers out there :).
 
-To build this project run cmake inside the DontStopMoving.
+To build this project run cmake inside the DontStopMoving folder.
+
+Open the Visual Studio Project, things you need todo 
+    Set the Project FasterQuicker as the startup project.
+    Select show all files open DontStopMoving -- Src -- then open Controller, Render, Sound & Math. Shift select all files and include then in the project this will be class .cpp & .h files.
+    Build the project.
+    Copy the DLL files from the Deps folder and paste them into where the executable is located.
+    Try runnning the project.
+
+
+
+Enjoy!
