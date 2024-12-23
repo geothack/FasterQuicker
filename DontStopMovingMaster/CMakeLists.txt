@@ -3,7 +3,26 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMKAE_CXX_STANDARD_REQUIRED ON)
 
 project(FasterQuicker VERSION 1.0)
-add_executable(FasterQuicker DontStopMoving/Src/App/main.cpp)
+
+
+set(SOURCES
+
+DontStopMoving/Src/App/main.cpp
+DontStopMoving/Src/Controller/Controller.cpp
+DontStopMoving/Src/Controller/Controller.h
+DontStopMoving/Src/Math/Rectangle.h
+DontStopMoving/Src/Render/Window.cpp
+DontStopMoving/Src/Render/Window.h
+DontStopMoving/Src/Render/Text.cpp
+DontStopMoving/Src/Render/Text.h
+DontStopMoving/Src/Sounds/Sound.cpp
+DontStopMoving/Src/Sounds/Sound.h
+)
+
+add_executable(FasterQuicker ${SOURCES})
+
+
+
 target_include_directories(FasterQuicker PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} DontStopMoving/Src)
 target_include_directories(FasterQuicker PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} Deps/OPENAL/Include)
 target_link_libraries(FasterQuicker PUBLIC Deps/OPENAL/Lib/OpenAL32)
