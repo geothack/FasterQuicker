@@ -11,6 +11,7 @@ To build this project run cmake inside the DontStopMoving folder then build the 
 Open the Visual Studio Project, set the Project FasterQuicker as the startup project. 
 
 
+The project will run inside visual studio, not through running the executable as object paths have not be optimised for it.
 
 
 Enjoy!
