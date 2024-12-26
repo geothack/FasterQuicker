@@ -21,6 +21,41 @@ DontStopMoving/Src/Sounds/Sound.h
 
 add_executable(FasterQuicker ${SOURCES})
 
+add_custom_command(
+    TARGET FasterQuicker  # Replace with your target name
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/DLL/SDL2.dll  # Source DLL
+        ${PROJECT_BINARY_DIR}/Debug  # Destination directory
+    COMMENT "Copying DLL to the build directory"
+)
+
+add_custom_command(
+    TARGET FasterQuicker  # Replace with your target name
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/DLL/SDL2_image.dll  # Source DLL
+        ${PROJECT_BINARY_DIR}/Debug  # Destination directory
+    COMMENT "Copying DLL to the build directory"
+)
+
+add_custom_command(
+    TARGET FasterQuicker  # Replace with your target name
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/DLL/SDL2_ttf.dll  # Source DLL
+        ${PROJECT_BINARY_DIR}/Debug  # Destination directory
+    COMMENT "Copying DLL to the build directory"
+)
+
+add_custom_command(
+    TARGET FasterQuicker  # Replace with your target name
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/DLL/OpenAL32.dll  # Source DLL
+        ${PROJECT_BINARY_DIR}/Debug  # Destination directory
+    COMMENT "Copying DLL to the build directory"
+)
 
 
 target_include_directories(FasterQuicker PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} DontStopMoving/Src)
